@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #263238;
+
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* CABEÇALHO */
+
+header {
+    background-color: #ffffff;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #3157a6;
+}
+
+
+/* PARTE PRINCIPAL */
+
+.principal {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 60px 10%;
+}
+
+.texto {
+    max-width: 650px;
+}
+
+.bem-vindo {
+    color: #3157a6;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+}
+
+h1 span {
+    color: #3157a6;
+}
+
+.descricao {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* BOTÕES */
+
+.botoes {
+    display: flex;
+    gap: 15px;
+}
+
+.botoes a {
+    text-decoration: none;
+
+    padding: 13px 22px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.botao-principal {
+    background-color: #3157a6;
+    color: white;
+}
+
+.botao-principal:hover {
+    background-color: #24468a;
+}
+
+.botao-secundario {
+    background-color: white;
+    color: #3157a6;
+
+    border: 1px solid #3157a6;
+}
+
+
+/* ILUSTRAÇÃO */
+
+.ilustracao {
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background-color: #e4eafa;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 120px;
+}
+
+
+/* CARDS */
+
+.informacoes {
+    display: flex;
+
+    gap: 25px;
+
+    padding: 0 10% 60px;
+}
+
+.card {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    flex: 1;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.icone {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    background-color: #263238;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 14px;
+}
+
+/* Páginas internas */
+
+.pagina-interna {
+    background-color: #f5f7fb;
+}
+
+.pagina-interna nav {
+    background-color: #ffffff;
+    padding: 18px 10%;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.pagina-interna nav a {
+    color: #3157a6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pagina-interna nav a:hover {
+    color: #24468a;
+}
+
+.pagina-interna h1 {
+    font-size: 36px;
+    margin: 35px 10% 25px;
+}
+
+.pagina-interna h2 {
+    margin: 25px 10% 15px;
+}
+
+.pagina-interna form {
+    background-color: white;
+    margin: 0 10%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.pagina-interna form label {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.pagina-interna form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.pagina-interna form button {
+    background-color: #3157a6;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pagina-interna form button:hover {
+    background-color: #24468a;
+}
+
+.pagina-interna hr {
+    margin: 25px 10%;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.pagina-interna p {
+    margin: 15px 10%;
+    background-color: white;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.pagina-interna p a {
+    color: #3157a6;
+    margin-left: 8px;
+}
+
+.pagina-interna form select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.pagina-interna form input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.botao-voltar {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+
+    border: 1px solid #3157a6;
+    border-radius: 6px;
+
+    color: #3157a6;
+    background-color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao-voltar:hover {
+    background-color: #e4eafa;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.pagina-interna footer p {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    color: white;
+}
+
+.pagina-interna main {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        height: auto;
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .principal {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .texto {
+        width: 100%;
+    }
+
+    .ilustracao {
+        width: 200px;
+        height: 200px;
+        font-size: 80px;
+        margin-top: 30px;
+    }
+
+    .informacoes {
+        flex-direction: column;
+        padding: 0 5% 40px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .pagina-interna h1 {
+        font-size: 32px;
+        margin: 30px 5% 20px;
+    }
+
+    .pagina-interna form {
+        margin: 0 5%;
+        padding: 20px;
+    }
+
+    .pagina-interna form label {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .pagina-interna form input,
+    .pagina-interna form select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .botao-voltar {
+        margin-top: 10px;
+    }
+
+    .pagina-interna p {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biblioteca Comunitária</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            📚 Biblioteca Comunitária
+        </div>
+
+        <nav>
+            <a href="{{ url_for('inicio') }}">Início</a>
+            <a href="{{ url_for('livros') }}">Livros</a>
+            <a href="{{ url_for('usuarios') }}">Usuários</a>
+            <a href="{{ url_for('emprestimos') }}">Empréstimos</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="principal">
+
+            <div class="texto">
+
+                <p class="bem-vindo">BEM-VINDO</p>
+
+                <h1>
+                    Organizando conhecimento,
+                    <span>compartilhando histórias.</span>
+                </h1>
+
+                <p class="descricao">
+                    Um sistema desenvolvido para facilitar o gerenciamento
+                    de livros, usuários e empréstimos da biblioteca comunitária.
+                </p>
+
+                <div class="botoes">
+                    <a href="{{ url_for('livros') }}" class="botao-principal">Ver livros</a>
+                    <a href="#" class="botao-secundario">Sobre a biblioteca</a>
+                </div>
+
+            </div>
+
+            <div class="ilustracao">
+                📖
+            </div>
+
+        </section>
+
+
+        <section class="informacoes">
+
+            <div class="card">
+                <div class="icone">📚</div>
+                <h2>Livros</h2>
+                <p>Gerencie o acervo da biblioteca.</p>
+            </div>
+
+            <div class="card">
+                <div class="icone">👤</div>
+                <h2>Usuários</h2>
+                <p>Cadastre e organize os usuários.</p>
+            </div>
+
+            <div class="card">
+                <div class="icone">🔄</div>
+                <h2>Empréstimos</h2>
+                <p>Controle empréstimos e devoluções.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Biblioteca Comunitária • Projeto de Atividade Extensionista</p>
+    </footer>
+
+</body>
+
+</html>

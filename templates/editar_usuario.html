@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Editar Usuário</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="pagina-interna">
+
+<header>
+    <div class="logo">📚 Biblioteca Comunitária</div>
+
+    <nav>
+        <a href="{{ url_for('inicio') }}">Início</a>
+        <a href="{{ url_for('livros') }}">Livros</a>
+        <a href="{{ url_for('usuarios') }}">Usuários</a>
+        <a href="{{ url_for('emprestimos') }}">Empréstimos</a>
+    </nav>
+</header>
+
+<main>
+
+    <h1>Editar Usuário</h1>
+
+    <form method="POST">
+
+        <label>Nome:</label>
+        <input type="text" name="nome" value="{{ usuario.nome }}" required>
+
+        <br><br>
+
+        <label>E-mail:</label>
+        <input type="email" name="email" value="{{ usuario.email }}">
+
+        <br><br>
+
+        <label>Telefone:</label>
+        <input type="text" name="telefone" value="{{ usuario.telefone }}">
+
+        <br><br>
+
+        <button type="submit">Salvar alterações</button>
+
+        <a href="{{ url_for('usuarios') }}" class="botao-voltar">
+            ← Voltar para usuários
+        </a>
+
+    </form>
+
+</main>
+
+<footer>
+    <p>Biblioteca Comunitária • Projeto de Atividade Extensionista</p>
+</footer>
+
+</body>
+
+</html>

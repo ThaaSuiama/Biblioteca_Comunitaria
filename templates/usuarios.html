@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="pagina-interna">
+
+    <nav>
+        <a href="{{ url_for('inicio') }}">Início</a>
+        |
+        <a href="{{ url_for('livros') }}">Livros</a>
+        |
+        <a href="{{ url_for('usuarios') }}">Usuários</a>
+        |
+        <a href="{{ url_for('emprestimos') }}">Empréstimos</a>
+    </nav>
+
+    <hr>
+
+    <h1>Usuários da Biblioteca</h1>
+
+    <h2>Cadastrar novo usuário</h2>
+
+    <form method="POST">
+
+        <label>Nome:</label>
+        <input type="text" name="nome" required>
+
+        <br><br>
+
+        <label>E-mail:</label>
+        <input type="email" name="email">
+
+        <br><br>
+
+        <label>Telefone:</label>
+        <input type="text" name="telefone">
+
+        <br><br>
+
+        <button type="submit">Cadastrar usuário</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Usuários cadastrados</h2>
+
+{% for usuario in usuarios %}
+
+    <p>
+        <strong>{{ usuario.nome }}</strong>
+        - {{ usuario.email }}
+        - {{ usuario.telefone }}
+
+        <a href="{{ url_for('editar_usuario', id=usuario.id_usuario) }}">
+            Editar
+        </a>
+
+        <a href="{{ url_for('excluir_usuario', id=usuario.id_usuario) }}"
+            onclick="return confirm('Tem certeza que deseja excluir este usuário?');">
+            Excluir
+        </a>
+    </p>
+
+{% endfor %}
+
+</body>
+
+</html>

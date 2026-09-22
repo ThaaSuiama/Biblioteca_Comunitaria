@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimos</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="pagina-interna">
+
+    <nav>
+        <a href="{{ url_for('inicio') }}">Início</a>
+        |
+        <a href="{{ url_for('livros') }}">Livros</a>
+        |
+        <a href="{{ url_for('usuarios') }}">Usuários</a>
+        |
+        <a href="{{ url_for('emprestimos') }}">Empréstimos</a>
+    </nav>
+
+    <hr>
+
+    <h1>Empréstimos da Biblioteca</h1>
+
+    <h2>Registrar novo empréstimo</h2>
+
+    <form method="POST">
+
+        <label>Usuário:</label>
+        <select name="id_usuario" required>
+            <option value="">Selecione um usuário</option>
+
+            {% for usuario in usuarios %}
+                <option value="{{ usuario.id_usuario }}">
+                    {{ usuario.nome }}
+                </option>
+            {% endfor %}
+
+        </select>
+
+        <br><br>
+
+        <label>Livro:</label>
+        <select name="id_livro" required>
+            <option value="">Selecione um livro</option>
+
+            {% for livro in livros %}
+                <option value="{{ livro.id_livro }}">
+                    {{ livro.titulo }}
+                </option>
+            {% endfor %}
+
+        </select>
+
+        <br><br>
+
+        <label>Data do empréstimo:</label>
+        <input type="date" name="data_emprestimo" required>
+
+        <br><br>
+
+        <label>Data de devolução prevista:</label>
+        <input type="date" name="data_devolucao_prevista" required>
+
+        <br><br>
+
+        <button type="submit">Registrar empréstimo</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Empréstimos cadastrados</h2>
+
+    {% for emprestimo in emprestimos %}
+
+    <p>
+        <strong>{{ emprestimo.nome_usuario }}</strong>
+        - {{ emprestimo.titulo_livro }}
+        <br>
+        Empréstimo: {{ emprestimo.data_emprestimo }}
+        <br>
+        Devolução prevista: {{ emprestimo.data_devolucao_prevista }}
+        <br>
+        Status: {{ emprestimo.status }}
+
+        <br>
+
+        {% if emprestimo.status == "Emprestado" %}
+            <a href="{{ url_for('devolver', id=emprestimo.id_emprestimo) }}"
+            onclick="return confirm('Registrar a devolução deste livro?');">
+                Registrar devolução
+            </a>
+        {% endif %}
+    </p>
+
+    {% endfor %}
+
+</body>
+
+</html>
